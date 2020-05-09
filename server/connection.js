@@ -1,0 +1,16 @@
+let mysql = require('mysql');
+var connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'raphael96',
+    database: 'GlintsRestaurant'
+  });
+
+  connection.connect(function(err) {
+    if (err) {
+      return console.error('error: ' + err.message);
+    }
+  
+    console.log('Connected to the MySQL server.');
+  });
+   module.exports = connection;
